@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-right">
           <span className="text-left">Third</span>
-          <span className="text-left text-left">Lens</span>
+          <span className="text-left">Lens</span>
         </Link>
 
         <div className="flex space-x-6 font-semibold text-gray-700">
