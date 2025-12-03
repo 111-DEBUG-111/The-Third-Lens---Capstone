@@ -19,6 +19,24 @@ model User {
   email     String   @unique
   password  String
   createdAt DateTime @default(now())
+  news      News[]
+}
+
+model News {
+  id          Int      @id @default(autoincrement())
+  title       String   @db.Text
+  description String   @db.Text
+  content     String   @db.LongText
+  url         String?  @db.Text
+  urlToImage  String?  @db.Text
+  publishedAt DateTime @default(now())
+  source      String
+  category    String   @default("General")
+  ideology    String   @default("Neutral")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  userId      Int?
+  user        User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 
