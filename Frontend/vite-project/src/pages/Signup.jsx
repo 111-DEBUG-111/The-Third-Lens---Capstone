@@ -30,7 +30,10 @@ function Signup() {
       setLoading(false);
     }
   };
+import AuthForm from "./AuthForm";
+import Navbar from "../components/Navbar";
 
+export default function Signup() {
   return (
     <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
       {/* Background decoration */}
@@ -113,7 +116,11 @@ function Signup() {
         </div>
       </div>
     </div>
+    <>
+      <Navbar />
+      <div className="pt-20">
+        <AuthForm type="signup" />
+      </div>
+    </>
   );
 }
-
-export default Signup;

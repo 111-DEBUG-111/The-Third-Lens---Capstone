@@ -28,7 +28,10 @@ function Login() {
       setLoading(false);
     }
   };
+import AuthForm from "./AuthForm";
+import Navbar from "../components/Navbar";
 
+export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
       {/* Background decoration */}
@@ -101,7 +104,11 @@ function Login() {
         </div>
       </div>
     </div>
+    <>
+      <Navbar />
+      <div className="pt-20">
+        <AuthForm type="login" />
+      </div>
+    </>
   );
 }
-
-export default Login;
